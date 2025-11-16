@@ -24,6 +24,7 @@ def download_mp3(url: str, base_dir: str) -> (str, str):
         "yt-dlp",
         "--extract-audio",
         "--audio-format", "mp3",
+        "--extractor-args", "youtube:player_client=android",
         "-o", mp3_pattern,
         url
     ]
